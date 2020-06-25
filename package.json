@@ -29,7 +29,8 @@
   "files": [
     "src",
     "build",
-    "template"
+    "template",
+    "webpack.config.ts"
   ],
   "repository": {
     "type": "git",
