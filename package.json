@@ -24,7 +24,8 @@
   },
   "pre-commit": [
     "style",
-    "lint"
+    "lint",
+    "build"
   ],
   "files": [
     "src",
