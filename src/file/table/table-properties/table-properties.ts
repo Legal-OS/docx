@@ -7,6 +7,7 @@ import { WidthType } from "../table-cell";
 import { ITableBordersOptions, TableBorders } from "./table-borders";
 import { TableCellMargin } from "./table-cell-margin";
 import { ITableFloatOptions, TableFloatProperties } from "./table-float-properties";
+import { TableIndent } from "./table-indent";
 import { TableLayout, TableLayoutType } from "./table-layout";
 import { PreferredTableWidth } from "./table-width";
 
@@ -51,5 +52,10 @@ export class TableProperties extends IgnoreIfEmptyXmlComponent {
 
     public setAlignment(type: AlignmentType): void {
         this.root.push(new Alignment(type));
+    }
+
+    public setIndent(ind: number, type: string = "dxa"): TableProperties {
+        this.root.push(new TableIndent(type, ind));
+        return this;
     }
 }

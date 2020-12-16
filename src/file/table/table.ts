@@ -36,6 +36,10 @@ export interface ITableOptions {
     readonly layout?: TableLayoutType;
     readonly borders?: ITableBordersOptions;
     readonly alignment?: AlignmentType;
+    readonly indent?: {
+        readonly ind: number;
+        readonly type?: string;
+    };
 }
 
 export class Table extends XmlComponent {
@@ -50,6 +54,7 @@ export class Table extends XmlComponent {
         layout,
         borders,
         alignment,
+        indent,
     }: ITableOptions) {
         super("w:tbl");
         this.properties = new TableProperties();
@@ -111,6 +116,9 @@ export class Table extends XmlComponent {
 
         if (alignment) {
             this.properties.setAlignment(alignment);
+        }
+        if (indent) {
+            this.properties.setIndent(indent.ind, indent.type);
         }
     }
 }

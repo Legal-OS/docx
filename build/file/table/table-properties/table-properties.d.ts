@@ -16,4 +16,5 @@ export declare class TableProperties extends IgnoreIfEmptyXmlComponent {
     setTableFloatProperties(tableFloatOptions: ITableFloatOptions): TableProperties;
     setShading(attrs: ITableShadingAttributesProperties): TableProperties;
     setAlignment(type: AlignmentType): void;
+    setIndent(ind: number, type?: string): TableProperties;
 }

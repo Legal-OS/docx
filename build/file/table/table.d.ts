@@ -22,8 +22,12 @@ export interface ITableOptions {
     readonly layout?: TableLayoutType;
     readonly borders?: ITableBordersOptions;
     readonly alignment?: AlignmentType;
+    readonly indent?: {
+        readonly ind: number;
+        readonly type?: string;
+    };
 }
 export declare class Table extends XmlComponent {
     private readonly properties;
-    constructor({ rows, width, columnWidths, margins: { marginUnitType, top, bottom, right, left }, float, layout, borders, alignment, }: ITableOptions);
+    constructor({ rows, width, columnWidths, margins: { marginUnitType, top, bottom, right, left }, float, layout, borders, alignment, indent, }: ITableOptions);
 }
