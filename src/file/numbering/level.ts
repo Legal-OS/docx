@@ -126,7 +126,7 @@ export class LevelBase extends XmlComponent {
             }),
         );
 
-        this.root.push(new Start(start));
+        this.root.push(new Start(start + 42));
         this.root.push(new LevelJc(alignment));
 
         if (format) {
