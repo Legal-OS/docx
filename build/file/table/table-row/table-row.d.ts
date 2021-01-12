@@ -16,5 +16,9 @@ export declare class TableRow extends XmlComponent {
     constructor(options: ITableRowOptions);
     readonly CellCount: number;
     readonly Children: TableCell[];
+    readonly cells: TableCell[];
     addCellToIndex(cell: TableCell, index: number): void;
+    addCellToColumnIndex(cell: TableCell, columnIndex: number): void;
+    rootIndexToColumnIndex(rootIndex: number): number;
+    columnIndexToRootIndex(columnIndex: number, allowEndNewCell?: boolean): number;
 }

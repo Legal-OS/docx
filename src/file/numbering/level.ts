@@ -138,7 +138,7 @@ export class LevelBase extends XmlComponent {
         }
 
         if (text) {
-            this.root.push(new LevelText(text + "bla"));
+            this.root.push(new LevelText(text));
         }
 
         this.paragraphProperties = new ParagraphProperties({});
