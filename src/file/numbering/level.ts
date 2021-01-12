@@ -126,7 +126,7 @@ export class LevelBase extends XmlComponent {
             }),
         );
 
-        this.root.push(new Start(start + 42));
+        this.root.push(new Start(start));
         this.root.push(new LevelJc(alignment));
 
         if (format) {
@@ -138,7 +138,7 @@ export class LevelBase extends XmlComponent {
         }
 
         if (text) {
-            this.root.push(new LevelText(text));
+            this.root.push(new LevelText(text + "bla"));
         }
 
         this.paragraphProperties = new ParagraphProperties({});
