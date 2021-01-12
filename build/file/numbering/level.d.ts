@@ -17,11 +17,12 @@ export interface ILevelsOptions {
         readonly run?: IRunStyleOptions;
         readonly paragraph?: IParagraphStyleOptions2;
     };
+    readonly levelRestart?: number;
 }
 export declare class LevelBase extends XmlComponent {
     private readonly paragraphProperties;
     private readonly runProperties;
-    constructor({ level, format, text, alignment, start, style, suffix }: ILevelsOptions);
+    constructor({ level, format, text, alignment, start, style, suffix, levelRestart }: ILevelsOptions);
 }
 export declare class Level extends LevelBase {
     constructor(options: ILevelsOptions);
