@@ -16,6 +16,17 @@ export class Bold extends XmlComponent {
     }
 }
 
+export class BoldWithExactValue extends XmlComponent {
+    constructor(value: string) {
+        super("w:b");
+        this.root.push(
+            new Attributes({
+                val: value,
+            }),
+        );
+    }
+}
+
 export class BoldComplexScript extends XmlComponent {
     constructor() {
         super("w:bCs");
