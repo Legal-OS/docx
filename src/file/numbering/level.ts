@@ -161,6 +161,10 @@ export class LevelBase extends XmlComponent {
                     this.runProperties.push(new formatting.Bold());
                 }
 
+                if (style.run.boldExactValue) {
+                    this.runProperties.push(new formatting.BoldWithExactValue(style.run.boldExactValue));
+                }
+
                 if (style.run.italics) {
                     this.runProperties.push(new formatting.Italics());
                 }
