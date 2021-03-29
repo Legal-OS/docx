@@ -6,6 +6,9 @@ export { RunFonts, IFontAttributesProperties } from "./run-fonts";
 export declare class Bold extends XmlComponent {
     constructor();
 }
+export declare class BoldWithExactValue extends XmlComponent {
+    constructor(value: string);
+}
 export declare class BoldComplexScript extends XmlComponent {
     constructor();
 }
