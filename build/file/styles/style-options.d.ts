@@ -3,6 +3,7 @@ import { ShadingType } from "../table";
 export interface IRunStyleOptions {
     readonly size?: number;
     readonly bold?: boolean;
+    readonly boldExactValue?: string;
     readonly italics?: boolean;
     readonly smallCaps?: boolean;
     readonly allCaps?: boolean;
