@@ -10,6 +10,7 @@ export declare class TableProperties extends IgnoreIfEmptyXmlComponent {
     private readonly cellMargin;
     constructor();
     setWidth(width: number, type?: WidthType): TableProperties;
+    setIndent(width: number, type?: WidthType): TableProperties;
     setLayout(type: TableLayoutType): void;
     setBorder(borderOptions: ITableBordersOptions): TableProperties;
     readonly CellMargin: TableCellMargin;

@@ -24,6 +24,10 @@ export interface ITableOptions {
         readonly size: number;
         readonly type?: WidthType;
     };
+    readonly indent?: {
+        readonly size: number;
+        readonly type?: WidthType;
+    };
     readonly columnWidths?: number[];
     readonly margins?: {
         readonly marginUnitType?: WidthType;
@@ -44,6 +48,7 @@ export class Table extends XmlComponent {
     constructor({
         rows,
         width,
+        indent,
         columnWidths = Array<number>(Math.max(...rows.map((row) => row.CellCount))).fill(100),
         margins: { marginUnitType, top, bottom, right, left } = { marginUnitType: WidthType.AUTO, top: 0, bottom: 0, right: 0, left: 0 },
         float,
@@ -65,6 +70,10 @@ export class Table extends XmlComponent {
             this.properties.setWidth(width.size, width.type);
         } else {
             this.properties.setWidth(100);
+        }
+
+        if (indent) {
+            this.properties.setIndent(indent.size, indent.type);
         }
 
         this.properties.CellMargin.addBottomMargin(bottom || 0, marginUnitType);

@@ -25,6 +25,11 @@ export class TableProperties extends IgnoreIfEmptyXmlComponent {
         return this;
     }
 
+    public setIndent(width: number, type: WidthType = WidthType.AUTO): TableProperties {
+        this.root.push(new PreferredTableWidth(type, width, "w:tblInd"));
+        return this;
+    }
+
     public setLayout(type: TableLayoutType): void {
         this.root.push(new TableLayout(type));
     }
