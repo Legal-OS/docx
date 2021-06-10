@@ -10,6 +10,10 @@ export interface ITableOptions {
         readonly size: number;
         readonly type?: WidthType;
     };
+    readonly indent?: {
+        readonly size: number;
+        readonly type?: WidthType;
+    };
     readonly columnWidths?: number[];
     readonly margins?: {
         readonly marginUnitType?: WidthType;
@@ -25,5 +29,5 @@ export interface ITableOptions {
 }
 export declare class Table extends XmlComponent {
     private readonly properties;
-    constructor({ rows, width, columnWidths, margins: { marginUnitType, top, bottom, right, left }, float, layout, borders, alignment, }: ITableOptions);
+    constructor({ rows, width, indent, columnWidths, margins: { marginUnitType, top, bottom, right, left }, float, layout, borders, alignment, }: ITableOptions);
 }
